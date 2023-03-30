@@ -1,0 +1,52 @@
+At the first phase of the project we were going to implement the project by creating a 
+scanner software using tesseract and tensorflow libraries so we startedd researching 
+and getting reference papers which can help us understand the main concepts and 
+terminologies of the tensorflow libraries and tesseract packages. Then we came 
+across a paper with Image Processing Based Scene-Text Detection and Recognition 
+with Tesseract, where we got to know about the tesseract how it works. The overflow of
+how the images go from preprocessing to the text area detection and by image cropping and 
+brightness check and gamma reaction it helps to make the text look brighter so that the text
+is extractewd properly. In this paper they used Tesseract V5. So we started implementing the
+scanner application in pytesseract and modyfying it with more gradient scale methods 
+so that the accuracy of the text detection is perfect. So in the paper we came to know 
+that the accuracy of the text detection is overall 83 percentage and the overall character 
+accuracy is 83.7 %. We wanted more accuracy as we have to determine the patients illness 
+and suggest them the meal plan according to there symptons. So we moved on to the first 
+presentation where sir suggested us to look out for Conventional Neural Network algorithms.
+After searching some algorithms we found out about Alexnet Conventional Neural Network. 
+As we started Implementing the project in Alexnet we came to know that the computational 
+power and time consumption is more in Alexnet. Then we came accross a similar paper as
+our project Text Detection and Recognition for Images of Medical Laboratory Reports With 
+a Deep Learning Approach Where they used RCNN algorithm which is the same as Alex net with High 
+computational power and time consuming. 
+Then we started implementing the project in Lenet5 and we got the same accuracy as the Alexnet and RCNN but in less 
+time.First creating the Lenet5 CNN model by implementing the algorithm and recognizing the
+words in every line. We got accuracy with compare to our dataset which we used for trainning 
+the model so that we can get the accuracy of the model which we created. So we were able to 
+detect the text from the datasets but there was a problem we were facing. There are large space 
+between each line and we cannot change the word size and style. The algorithm is that we recognize 
+each line in the image. After that, we recognize the word in each line. After that, we recognize character 
+in each word. Therefore, we have to set up the threshold. If characters are within threshold distance, they 
+are grouped together. Otherwise, the characters are not in the same group. In this way, we can put the nearby 
+character in the bounding box in order to generate the word. Therefore, we have to ensure that there are large 
+space on left side, right side, down side, and up side.We cannot put the word in the table because it is going 
+to recognize the table object as a character. So after solving the problems by resizing the images and cutting 
+out pixels we were able to decrease the spaces in between the characters. As we were able to get the characters 
+from the dataset we started implementing on the dummy medical reports and we were getting accurate results.
+For the prediction part we first use the bmi calculation funcction with the help of the height and weight of 
+the person. then it checks if the bmi is less than 18.5 then it tags you in the underweight section and 
+what all diet you should follow. Likewise it states for the bmi normal from 18.5 to 25 range. After that it states 
+for the overweight which ranges from 25 - 30. And at the last it categories for Obese which ranges greater than 30
+bmi. Then we focused on the RBC and WBC counts and measure it according to the age and states whether your hemogloblin 
+is normal which ranges from 11.5 to 15.5 in your body , is it low which ranges les than 11.5 and you have to eat fruits 
+, vegetables etc. At the last Is the Hemoglobin high if it exceeds the range. Then It has a function of RBC with normal
+ranging from 4.0 to 5.5, low ranging from less than 4.0 and high rbc ranging from greater than 5.5. Then coms the WBC count 
+with WBC normal between 5000 - 10000 , low ranging from less than 5000 and high ranging from greater than 10000.
+At the last we made some more Enhancements with calculating the Hemoglobin, WBC and RBC as Per the Gender 
+So Male gender ranging for Hemoglobin is 13.5-17.5 for normal hemoglobin, less than 13.5 for low hemoglobin and 
+greater than 17.5 for higher hemoglobin with following every diet for what to take and what not to take. Same for the Rbc 
+ranging from 4.7-6.1 for normal, less than 4.7 for lower and higher with ranging from greater than 6.1. Now comes 
+the WBC count with normal having 5000 - 10000, lower ranging from less than 5000 and higher ranging for greater than 10000
+After each calculation we have given specific diet to follow for the categories. Likewise we have implemented it for the 
+Female Gender. 
+   
